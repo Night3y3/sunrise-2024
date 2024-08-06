@@ -9,7 +9,7 @@ interface TitleProps {
 const Title = React.memo(({ title, totalTasks, className }: TitleProps) => {
     return (
         <div className="flex">
-            <h4 className="font-semibold">{title}</h4>
+            <h4 className="font-semibold text-black">{title}</h4>
             <span className={`rounded-full px-2 ml-2 ${className}`}>
                 {totalTasks}
             </span>

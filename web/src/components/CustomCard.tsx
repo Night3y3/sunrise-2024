@@ -19,7 +19,7 @@ const CustomCard: React.FC<CardProps> = ({ disabled, task, handleTaskComplete, c
     return (
         <Box sx={{ maxWidth: 275 }}>
             <Card variant="outlined" sx={{ minHeight: 200 }}>
-                <CardHeader title={`Task ${task.id}`} action={columnTitle === "Completed" ? null : (
+                <CardHeader className={`${columnTitle === "Completed" ? `text-center` : ``}`} title={`Task ${task.id}`} action={columnTitle === "Completed" ? null : (
                     <Button
                         size="small"
                         variant="contained"
@@ -30,6 +30,7 @@ const CustomCard: React.FC<CardProps> = ({ disabled, task, handleTaskComplete, c
                     </Button>
                 )}
                 />
+                <hr />
                 <CardContent>
                     <Typography sx={{ fontSize: 16 }} fontWeight={"medium"} gutterBottom>
                         {task.title}
