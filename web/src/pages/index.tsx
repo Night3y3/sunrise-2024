@@ -1,14 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import { useCallback, useEffect, useState, useMemo } from "react";
 import Task from "@/model/Task";
-import { fetchTasks, fetchActiveTasks, fetchCompletedTasks, handleTaskComplete } from "@/utils/fetch";
+import { fetchTasks, fetchActiveTasks, fetchCompletedTasks } from "@/utils/fetch";
 import debounce from "lodash.debounce";
-import CustomCard from "@/components/CustomCard";
 import React from "react";
-import Title from "@/components/Title";
 import TaskColumn from "@/components/TaskColumn";
 
 const inter = Inter({ subsets: ["latin"] });
