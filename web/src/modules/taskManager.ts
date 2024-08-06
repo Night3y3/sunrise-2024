@@ -5,14 +5,6 @@ let tasks: Task[] = [...initialTasks];
 
 export function initializeTasks() {
   tasks = [...initialTasks];
-  const firstGroupTasks = tasks.filter((task) => task.group === 1);
-  firstGroupTasks.forEach((task) => {
-    task.completed = false;
-  });
-  const secondGroupTasks = tasks.filter((task) => task.group === 2);
-  secondGroupTasks.slice(0, 2).forEach((task) => {
-    task.completed = false;
-  });
 }
 
 export function getActiveTasks(): Task[] {
