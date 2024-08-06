@@ -41,7 +41,7 @@ describe("Task Manager", () => {
 
   test("should fetch active tasks", () => {
     const activeTasks = getActiveTasks();
-    expect(activeTasks).not.toEqual([
+    expect(activeTasks).toEqual([
       {
         completed: false,
         description: "Learn basic Git commands.",
